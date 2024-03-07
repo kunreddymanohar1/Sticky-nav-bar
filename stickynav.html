@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky nav bar</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .blog{
+            font-size: 16px;
+            padding: 8px 9px;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgb(144, 238, 211);
+        }
+        .write h3{
+            margin-right: -600px;
+            margin-top: 0%;
+        }
+        #navbar {
+           overflow: hidden;
+           background-color: #333;
+           position: sticky;
+           top: 0;
+           z-index: 1000;
+           box-shadow: 0px 4px 8px black;
+       }
+
+        #navbar a {
+            float: left;
+            display: block;
+           color: #f2f2f2;
+            text-align: center;
+           padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+          
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        #navbar a.active {
+              background-color: #04AA6D;
+             color: white;
+          }
+          .con{
+            background-image:url("https://cdn.techloris.com/app/uploads/2020/10/keyboard-light.jpg") ;
+            height: 50vh;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .con h1{
+            color: white;
+            font-size: 50px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 2px;
+          }
+          .content{
+            padding-top: 60px;
+          }
+        
+        
+
+
+    </style>
+</head>
+<body>
+    <section class="blog">
+         <div class="write">
+            <h3>Manohar Reddy</h3>
+
+            
+         </div>
+         <div id="navbar">
+            <a class="active"href="">Home</a>
+            <a href="">Blog</a>
+            <a href="">Contact</a>
+         </div>
+         <div class="con">
+           
+                <h1>Welcome to our website</h1>
+             
+        </div>
+        
+        <div class="content">
+            <p>A computer keyboard is an input device used to enter characters and functions into the computer system by pressing buttons, or keys. It is the primary device used to enter text. A keyboard typically contains keys for individual letters, numbers and special characters, as well as keys for specific functions. A keyboard is connected to a computer system using a cable or a wireless connection.</p>
+
+            <p>Most keyboards have a very similar layout. The individual keys for letters, numbers and special characters are collectively called the character keys. The layout of these keys is derived from the original layout of keys on a typewriter. The most widely used layout in the English language is called QWERTY, named after the sequence of the first six letters from the top left.
+
+                Other sets of keys common to almost all keyboards are entering and editing keys (e.g., Enter, Delete, Insert), modifier keys (e.g., Control, Shift), navigation keys (e.g., arrows for up, down, left, right) and lock keys (e.g., Caps Lock). Additional keys are very operating system specific (such as the Windows and Apple keys).
+                
+                Most keyboards also include a set of function keys at the top (F1, F2, etc.). The function keys typically perform a very specific task within a particular software application. So, what they do may depend on what you are doing on your computer at the time.
+                
+                </p>
+            <p>Modern keyboards matching US conventions typically have 104 keys while the 105 key layout is the norm in the rest of the world. This number is not always followed, and individual keys or whole sections are commonly skipped for the sake of compactness or user preference.</p>   
+            <p>A keyboard is one of the primary input devices that allows users to input text into a computer or any other electronic machinery. It is a peripheral device that is the most basic way for the user to communicate with a computer. It consists of multiple buttons, which create numbers, symbols, and letters, and special keys like the Windows and Alt key, including performing other functions. The design of the keyboard comes from the typewriter keyboards, and numbers and letters are arranged on the keyboard in that way, which helps to type quickly.</p>
+            <p>Keyboard keys (buttons) typically have a set of characters engraved or printed on them, and each press of a key typically corresponds to a single written symbol. However, producing some symbols may require pressing and holding several keys simultaneously or in sequence.[3] While most keys produce characters (letters, numbers or symbols), other keys (such as the escape key) can prompt the computer to execute system commands. In a modern computer, the interpretation of key presses is generally left to the software: the information sent to the computer, the scan code, tells it only which physical key (or keys) was pressed or released</p> 
+        </div>
+    </section>
+    <script>
+        window.onscroll= function(){
+
+        }
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function stickyNavbar(){
+            if(window.pageYOffset >= sticky){
+                navbar.classList.add("sticky");
+            } else{
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>
